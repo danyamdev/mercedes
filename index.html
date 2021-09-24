@@ -10,9 +10,12 @@
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="./css/style.css">
 
-	<script src="accordion.js" defer></script>
+	<script src="burgerMenu.js" defer></script>
 	<script src="smoothscroll.js" defer></script>
+	<script src="accordion.js" defer></script>
 	<script src="tabs.js" defer></script>
+	<script src="modal.js" defer></script>
+	<script src="sendForm.js" defer></script>
 </head>
 
 <body>
@@ -178,7 +181,7 @@
 					</h2>
 					<ul class="feature-list">
 						<li class="feature__item">
-							<button type="button" class="feature__link feature__link_active">
+							<button type="button" class="feature__link">
 								<div class="feature-item-wrap">
 									<span class="feature-item__title">
 										Спецификация
@@ -186,7 +189,7 @@
 								</div>
 							</button>
 							<!-- /.feature__link -->
-							<ul class="feature-sub">
+							<ul class="feature-sub hidden">
 								<li class="feature-sub__item">
 									<span class="feature-sub__name">
 										Привод автомобиля

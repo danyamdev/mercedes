@@ -4,7 +4,7 @@ const fields = document.querySelectorAll('[data-tabs-field]');
 btnsTab.forEach(btn => {
   btn.addEventListener('click', () => {
 
-    btnsTabs.forEach(item => item.classList.remove('design-list__item_active'));
+    btnsTab.forEach(item => item.classList.remove('design-list__item_active'));
     btn.classList.add('design-list__item_active');
 
     const attr = btn.dataset.tabsHandler;

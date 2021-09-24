@@ -12,5 +12,9 @@ arrayLinks.forEach(link => {
       behavior: 'smooth',
       block: 'start'
     });
+
+    if (humburgerMenu.classList.contains('humburger-menu-active'))
+      toggleMenu();
+
   });
 });
