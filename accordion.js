@@ -1,19 +1,18 @@
 const btns = document.querySelectorAll('.feature__link');
 const lists = document.querySelectorAll('.feature-sub');
 
-btns.forEach( (btn, index) => {
+btns.forEach(btn => {
   btn.addEventListener('click', () => {
-    
-    if (btn.classList.contains('feature__link_active')) {
-      btn.classList.remove('feature__link_active');
-      lists[index].classList.add('hidden');
-    } else {
-      btns.forEach(btn => btn.classList.remove('feature__link_active'));
-      lists.forEach(list => list.classList.add('hidden'));
+    btns.forEach( (btnItem, index) => {
 
-      btn.classList.add('feature__link_active');
-      lists[index].classList.remove('hidden');
-    }
+      if (btnItem == btn) {
+        btnItem.classList.toggle('feature__link_active');
+        lists[index].classList.toggle('hidden');
+      } else {
+        btnItem.classList.remove('feature__link_active');
+        lists[index].classList.add('hidden');
+      }
 
+    });
   });
 });
