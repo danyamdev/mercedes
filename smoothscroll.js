@@ -1,11 +1,12 @@
 const menuLinks = document.querySelectorAll('.menu-list__link');
+const mainScroll = document.querySelector('.main__scroll');
+const arrayLinks = [...menuLinks, mainScroll];
 
-menuLinks.forEach(link => {
+arrayLinks.forEach(link => {
   link.addEventListener('click', event => {
     event.preventDefault();
 
-    const target = event.target;
-    const ID = target.getAttribute('href').slice(1);
+    const ID = event.target.getAttribute('href').slice(1);
     
     document.getElementById(ID).scrollIntoView({
       behavior: 'smooth',
